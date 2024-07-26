@@ -31,20 +31,39 @@ body{
     height: 150px;
     border-radius: 20%;
     animation-name: eyes;
-    animation-duration: 3s;
-    /* animation-timing-function: ease-in; */
-    /* animation-timing-function: ease-in-out; */
-  animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+
+
+
+
+  /* transition: width 3s   ,  background-color 3s;
+     transition: width 3s  ease 1s; */
+     /*
+        ease slow speed slow
+        ease in  slow normal slow
+        */
+
+     /* property duration    delay*/
+     /*transition: width 3s   ,  background-color 3s; */
+
+    /* transform: rotate(30deg) translate(500px,100px) skew(3px); */
+    /* transform: scale(1.2); */
 
 }
 @keyframes eyes{
     0%{
-       transform: translateX(100%);
+       transform: translateX(0);
     }
     50%{
-        transform: translateX(-100%);
+        transform: translateX(100%);
      }
-     100%{
+     75%{
         transform: translateX(0);
+     }
+
+     100%{
+        transform: translateX(-100%);
      }
 }
